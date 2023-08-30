@@ -1,0 +1,89 @@
+// HOME
+
+.home {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 18px;
+    padding: 40px 0 50px 0;
+    background-color: #F6F6F6;
+}
+
+.search-form {
+    background-color: #eaeaea;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    gap: 17px;
+
+    .search-form-icon {
+        width: 12px;
+        height: 16px;
+    }
+}
+
+input {
+    border: none;
+    background-color: #eaeaea;
+    padding: 0;
+}
+
+::placeholder {
+    color: #353535;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.filtres {
+    padding: 50px 0 68px 10px;
+
+
+    ol {
+        display: grid;
+        row-gap: 2rem;
+    }
+
+    .filter-button {
+        display: flex;
+        align-items: center;
+        position: relative;
+        width: 70%;
+        border-radius: 20px;
+        padding: 1.75rem;
+        background: var(--background, #F6F6F6);
+        box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
+        margin: auto;
+        gap: 1.25rem;
+
+    }
+}
+
+.order-number {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    background: #9356dc;
+    color: white;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    left: -1rem;
+
+}
+
+.fa-color {
+    color: #7E7E7E;
+}
+
+.menu-cards {
+    display: grid;
+    justify-content: center;
+    gap: 18px;
+    background-color: #F6F6F6;
+    box-sizing: border-box;
+    padding-bottom: 66px;
+}

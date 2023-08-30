@@ -1,0 +1,18 @@
+// _header.scss //
+
+header {
+    background: var(--white, #FFF);
+    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
+    width: 100%;
+
+}
+
+.logo-header img {
+    display: block;
+    position: relative;
+    width: 162px;
+    height: 44px;
+    margin: auto;
+    padding: 14px 89px 13px 89px;
+
+}
