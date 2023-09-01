@@ -15,28 +15,18 @@
 
 .tag {
     position: absolute;
-    background: #a9e0d1;
-    color: #3b8468;
+    background: #99E2D0;
+    color: #008766;
     font-weight: 500;
     padding: 0.7rem 1.5rem;
     border-radius: 0.3rem;
     top: 1.5rem;
     right: 1.5rem;
+    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
 }
 
 .card-content {
     display: grid;
     padding: 16px 0 0 13px;
     gap: 5px
-}
-
-.fa-like {
-    position: relative;
-    bottom: 33px;
-    right: -300px;
-    font-size: 22px;
-}
-
-.fa-like2 {
-    opacity: 0%;
 }
