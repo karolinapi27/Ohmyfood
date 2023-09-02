@@ -1,0 +1,28 @@
+// heart animations //
+.empty-heart {
+    position: absolute;
+    right: 25px;
+    top: 85%;
+    transform: translateY(-50%);
+    font-size: 22px;
+}
+
+.full-heart {
+    position: absolute;
+    right: 25px;
+    top: 85%;
+    transform: translateY(-50%);
+    font-size: 22px;
+    opacity: 0;
+    background-clip: text;
+    transition-property: all;
+    transition-duration: 2s;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.full-heart:hover {
+    opacity: 2;
+    background-image: $btn-color;
+}

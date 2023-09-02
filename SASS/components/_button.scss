@@ -1,4 +1,5 @@
 .button {
+    @include btn-typography;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -7,40 +8,8 @@
     border-radius: 25px;
     background: $btn-color;
     margin: auto;
-    color: #fff;
     white-space: nowrap;
     cursor: pointer;
     transition: background-color 250ms;
     transition-property: all;
-
-    &:hover {
-        background: linear-gradient();
-    }
-
-}
-
-.empty-heart {
-    position: relative;
-    bottom: 33px;
-    right: -300px;
-    font-size: 22px;
-}
-
-.full-heart {
-    position: relative;
-    bottom: 33px;
-    right: -300px;
-    font-size: 22px;
-    opacity: 0;
-    background-clip: text;
-    transition-property: all;
-    transition-duration: 2s;
-    background-clip: text;
-    -webkit-background-clip: text;
-    color: transparent;
-}
-
-.full-heart:hover {
-    opacity: 2;
-    background-image: $btn-color;
 }

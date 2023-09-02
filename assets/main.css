@@ -23,8 +23,8 @@ ol {
 
 body {
   font-family: "roboto", sans-serif;
-  font-size: 16px;
   margin: auto;
+  box-sizing: border-box;
 }
 
 a {
@@ -39,11 +39,6 @@ h2 {
   line-height: normal;
 }
 
-h2 {
-  padding-bottom: 25px;
-  margin-left: 20px;
-}
-
 h3 {
   color: black;
   font-size: 18px;
@@ -53,13 +48,19 @@ h3 {
 }
 
 p {
-  font-size: 18px;
+  color: black;
+  font-size: 17px;
   font-style: normal;
   font-weight: 300;
   line-height: normal;
 }
 
 .button {
+  color: #fff;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -68,35 +69,10 @@ p {
   border-radius: 25px;
   background: var(--button-gradient, linear-gradient(175deg, #9356DC 0%, #FF79DA 100%));
   margin: auto;
-  color: #fff;
   white-space: nowrap;
   cursor: pointer;
-}
-
-.empty-heart {
-  position: absolute;
-  bottom: 33px;
-  right: -300px;
-  font-size: 22px;
-}
-
-.full-heart {
-  position: absolute;
-  bottom: 33px;
-  right: -300px;
-  font-size: 22px;
-  opacity: 0;
-  background-clip: text;
+  transition: background-color 250ms;
   transition-property: all;
-  transition-duration: 2s;
-  background-clip: text;
-  -webkit-background-clip: text;
-  color: transparent;
-}
-
-.full-heart:hover {
-  opacity: 2;
-  background-image: var(--button-gradient, linear-gradient(175deg, #9356DC 0%, #FF79DA 100%));
 }
 
 .card {
@@ -128,8 +104,36 @@ p {
 
 .card-content {
   display: grid;
-  padding: 16px 0 0 13px;
+  padding: 16px 0 15px 13px;
   gap: 5px;
+}
+
+.empty-heart {
+  position: absolute;
+  right: 25px;
+  top: 85%;
+  transform: translateY(-50%);
+  font-size: 22px;
+}
+
+.full-heart {
+  position: absolute;
+  right: 25px;
+  top: 85%;
+  transform: translateY(-50%);
+  font-size: 22px;
+  opacity: 0;
+  background-clip: text;
+  transition-property: all;
+  transition-duration: 2s;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.full-heart:hover {
+  opacity: 2;
+  background-image: var(--button-gradient, linear-gradient(175deg, #9356DC 0%, #FF79DA 100%));
 }
 
 .home {
@@ -160,7 +164,7 @@ input {
   padding: 0;
 }
 
-::placeholder {
+input::placeholder {
   color: #353535;
   font-size: 16px;
   font-style: normal;
@@ -169,7 +173,9 @@ input {
 }
 
 .filtres {
-  padding: 50px 0 68px 10px;
+  display: grid;
+  gap: 25px;
+  padding: 50px 0 68px 0;
 }
 .filtres ol {
   display: grid;
@@ -186,6 +192,16 @@ input {
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
   margin: auto;
   gap: 1.25rem;
+}
+.filtres .filter-button p {
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.filtres h2 {
+  padding-left: 20px;
 }
 
 .order-number {
@@ -205,27 +221,26 @@ input {
   color: #7E7E7E;
 }
 
+.fa-color2 {
+  color: #9356dc;
+}
+
 .menu-cards {
   display: grid;
-  justify-content: center;
+  grid-template-columns: 1fr;
   gap: 18px;
   background-color: #F6F6F6;
-  box-sizing: border-box;
-  padding-bottom: 66px;
+  padding: 50px 15px 66px 15px;
 }
 
 header {
-  background: var(--white, #FFF);
+  display: flex;
+  justify-content: center;
   box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
-  width: 100%;
 }
-
-.logo-header img {
-  display: block;
-  position: relative;
+header img {
   width: 162px;
   height: 44px;
-  margin: auto;
   padding: 14px 89px 13px 89px;
 }
 
