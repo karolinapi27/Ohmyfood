@@ -1,6 +1,6 @@
 // HOME
 
-.home {
+.home-banner {
     display: flex;
     flex-direction: column;
     text-align: center;
@@ -89,7 +89,7 @@ input::placeholder {
     color: #9356dc
 }
 
-.menu-cards {
+.home-grid {
     display: grid;
     grid-template-columns: 1fr;
     gap: 18px;

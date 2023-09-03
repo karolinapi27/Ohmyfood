@@ -1,0 +1,71 @@
+// Image de la page restaurant //
+.restaurant-image {
+    display: block;
+    width: 100%;
+    height: 275px;
+}
+
+// Titre de la page restaurant//
+
+.title-section {
+    position: relative;
+    background-color: #f6f6f6;
+    border-radius: 25px 25px 0 0;
+    margin-top: -55px;
+
+    & h1 {
+        font-family: Shrikhand;
+        font-size: 28px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        padding: 35px 17px 40px 17px;
+    }
+}
+
+// Menu déroulant //
+
+.grid-cards-menu {
+    background-color: #f6f6f6;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 40px;
+
+    & h2 {
+        font-size: 16px;
+        font-weight: 300;
+        text-transform: uppercase;
+    }
+
+    & h3 {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        font-size: 18px;
+        font-weight: 500;
+    }
+
+    & p {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        font-size: 15.043px;
+    }
+}
+
+.price {
+    font-weight: 700;
+}
+
+.grid-cards-menu ul {
+    display: grid;
+    gap: 12px;
+}
+
+.grid-cards-menu li {
+    display: grid;
+    border: 2px solid (white);
+    border-radius: 20px;
+    padding: 15px;
+    background-color: white;
+}

@@ -27,7 +27,7 @@ footer li {
 }
 
 footer a {
-    color: white;
+    @include btn-typography;
 }
 
 .fa-footer {
