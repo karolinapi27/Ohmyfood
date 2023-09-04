@@ -39,9 +39,19 @@ input::placeholder {
     gap: 25px;
     padding: 50px 0 68px 0;
 
+    @media (min-width: 1024px) {
+        padding: 50px 180px 50px 180px;
+    }
+
     ol {
         display: grid;
         row-gap: 2rem;
+        padding: 0;
+        margin: 0;
+
+        @media (min-width: 1024px) {
+            display: flex;
+        }
     }
 
     .filter-button {
@@ -55,6 +65,7 @@ input::placeholder {
         box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
         margin: auto;
         gap: 1.25rem;
+        white-space: nowrap;
 
         p {
             @include typography;
@@ -89,6 +100,7 @@ input::placeholder {
     color: #9356dc
 }
 
+// Menu Cards //
 .home-grid {
     display: grid;
     grid-template-columns: 1fr;
@@ -96,4 +108,14 @@ input::placeholder {
     background-color: #F6F6F6;
     padding: 50px 15px 66px 15px;
 
+    @media (min-width: 768px) {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    @media (min-width: 1024px) {
+        padding-left: 180px;
+        padding-right: 180px;
+        row-gap: 50px;
+        column-gap: 100px;
+    }
 }
