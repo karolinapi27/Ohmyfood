@@ -5,6 +5,22 @@ $primary-color: #9356DC;
 $secondary-color: #FF79DA;
 $tertiary-color: #99E2D0;
 
+// Icon colors
+$icon-color: #7E7E7E;
+
+//background colors 
+$lightgrey: #eaeaea;
+$lightgrey2: #F6F6F6;
+$white: #FFFF;
+
+// Text colors
+$primary-text-color: black;
+$dark-grey: #353535;
+
+// Box shadow 
+
+$box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
+
 // Button color
 
 $btn-color: var(--button-gradient, linear-gradient(175deg, #9356DC 0%, #FF79DA 100%));

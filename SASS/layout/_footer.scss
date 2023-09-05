@@ -1,5 +1,5 @@
 footer {
-    background: #353535;
+    background: $dark-grey;
     padding: 22px 25px;
 
     @media (min-width: 768px) {
@@ -12,7 +12,7 @@ footer {
 }
 
 footer h3 {
-    font-family: "Shrikhand", cursive;
+    font-family: $font-title;
     font-weight: 400;
     color: white;
     padding-bottom: 16px;

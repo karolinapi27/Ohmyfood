@@ -35,7 +35,7 @@ ul {
 }
 
 body {
-  font-family: "roboto", sans-serif;
+  font-family: "Roboto", sans-serif, sans-serif;
   margin: auto;
   box-sizing: border-box;
 }
@@ -86,7 +86,7 @@ p {
   position: relative;
   width: 100%;
   border-radius: 15px;
-  background: #FFF;
+  background: white;
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1);
 }
 
@@ -144,17 +144,8 @@ p {
   background-image: var(--button-gradient, linear-gradient(175deg, #9356DC 0%, #FF79DA 100%));
 }
 
-.home-banner {
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  gap: 18px;
-  padding: 40px 0 50px 0;
-  background-color: #F6F6F6;
-}
-
 .search-form {
-  background-color: #eaeaea;
+  background: #eaeaea;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -168,7 +159,7 @@ p {
 
 input {
   border: none;
-  background-color: #eaeaea;
+  background: #eaeaea;
   padding: 0;
 }
 
@@ -180,49 +171,68 @@ input::placeholder {
   line-height: normal;
 }
 
-.filtres {
+.home-banner {
+  text-align: center;
+  padding: 40px 0 50px 0;
+  background: #F6F6F6;
+}
+.home-banner h1 {
+  padding-bottom: 20px;
+}
+.home-banner p {
+  font-size: 18px;
+  padding-bottom: 28px;
+}
+
+.filter {
   display: grid;
   gap: 25px;
   padding: 50px 0 68px 0;
 }
 @media (min-width: 1024px) {
-  .filtres {
+  .filter {
     padding: 50px 180px 50px 180px;
   }
 }
-.filtres ol {
+.filter ol {
   display: grid;
   row-gap: 2rem;
   padding: 0;
   margin: 0;
 }
 @media (min-width: 1024px) {
-  .filtres ol {
+  .filter ol {
     display: flex;
+    gap: 25px;
   }
 }
-.filtres .filter-button {
+.filter .filter-button {
   display: flex;
   align-items: center;
   position: relative;
   width: 70%;
   border-radius: 20px;
   padding: 1.75rem;
-  background: var(--background, #F6F6F6);
+  background: #F6F6F6;
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
   margin: auto;
   gap: 1.25rem;
   white-space: nowrap;
 }
-.filtres .filter-button p {
+.filter .filter-button p {
   font-size: 16px;
   font-style: normal;
   font-weight: 500;
   line-height: normal;
 }
 
-.filtres h2 {
+.filter h2 {
   padding-left: 20px;
+}
+@media (min-width: 1024px) {
+  .filter h2 {
+    padding-left: 0;
+  }
 }
 
 .order-number {
@@ -230,7 +240,7 @@ input::placeholder {
   align-items: center;
   justify-content: center;
   position: absolute;
-  background: #9356dc;
+  background: #9356DC;
   color: white;
   width: 24px;
   height: 24px;
@@ -243,43 +253,69 @@ input::placeholder {
 }
 
 .fa-color2 {
-  color: #9356dc;
+  color: #9356DC;
 }
 
-.home-grid {
+.section-home-card {
+  background: #F6F6F6;
+  padding: 50px 20px 66px 20px;
+}
+.section-home-card h2 {
+  padding-bottom: 28px;
+}
+@media (min-width: 1024px) {
+  .section-home-card {
+    padding-left: 180px;
+    padding-right: 180px;
+  }
+}
+
+.home-card-grid {
   display: grid;
   grid-template-columns: 1fr;
   gap: 18px;
-  background-color: #F6F6F6;
-  padding: 50px 15px 66px 15px;
 }
 @media (min-width: 768px) {
-  .home-grid {
+  .home-card-grid {
     grid-template-columns: 1fr 1fr;
   }
 }
 @media (min-width: 1024px) {
-  .home-grid {
-    padding-left: 180px;
-    padding-right: 180px;
+  .home-card-grid {
     row-gap: 50px;
     column-gap: 100px;
   }
 }
 
 .header-position {
-  padding-left: 17px;
+  position: relative;
+  padding-top: 13px;
+  padding-bottom: 13px;
+}
+@media (min-width: 1024px) {
+  .header-position {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
 }
 
 .header-arrow {
+  position: absolute;
   font-size: 25px;
-  margin-right: auto;
+  left: 20px;
+  bottom: 25px;
+}
+@media (min-width: 1024px) {
+  .header-arrow {
+    bottom: 44px;
+  }
 }
 
 .restaurant-image {
   display: block;
   width: 100%;
   height: 275px;
+  object-fit: cover;
 }
 
 .title-section {
@@ -288,13 +324,23 @@ input::placeholder {
   border-radius: 25px 25px 0 0;
   margin-top: -55px;
 }
+@media (min-width: 768px) {
+  .title-section {
+    margin-top: -25px;
+  }
+}
 .title-section h1 {
-  font-family: Shrikhand;
+  font-family: "Shrikhand", sans-serif;
   font-size: 28px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
   padding: 35px 17px 40px 10px;
+}
+@media (min-width: 768px) {
+  .title-section h1 {
+    text-align: center;
+  }
 }
 
 .flex {
@@ -303,8 +349,6 @@ input::placeholder {
 }
 
 .menu-section {
-  display: grid;
-  grid-template-columns: 1fr;
   background: #f6f6f6;
   padding: 0 10px 40px 10px;
 }
@@ -340,11 +384,17 @@ input::placeholder {
   padding-bottom: 40px;
   padding-top: 12px;
 }
+@media (min-width: 768px) {
+  .menu-section ul {
+    width: 80%;
+    margin: auto;
+  }
+}
 .menu-section ul li {
   display: grid;
   padding: 15px;
   border-radius: 15.043px;
-  background: var(--White, #FFF);
+  background: white;
   box-shadow: 0px 4.01149px 15.0431px 0px rgba(0, 0, 0, 0.1);
   position: relative;
 }
@@ -358,20 +408,22 @@ input::placeholder {
   height: 74px;
   background: #99E2D0;
   border-radius: 0 15.043px 15.043px 0;
-  position: absolute;
-  right: -55px;
+  display: none;
 }
 
 .btn-width {
   width: 186px;
 }
 
+@media (min-width: 768px) {
+  .main-responsive {
+    width: 80%;
+    margin: auto;
+  }
+}
 header {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
-  padding: 14px 89px 13px 89px;
+  text-align: center;
+  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
 }
 header img {
   width: 162px;
@@ -394,7 +446,7 @@ footer {
 }
 
 footer h3 {
-  font-family: "Shrikhand", cursive;
+  font-family: "Shrikhand", sans-serif;
   font-weight: 400;
   color: white;
   padding-bottom: 16px;

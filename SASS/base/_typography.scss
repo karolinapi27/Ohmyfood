@@ -5,7 +5,7 @@ $font-title: 'Shrikhand', sans-serif;
 $font-text: 'Roboto', sans-serif;
 
 body {
-  font-family: 'roboto', sans-serif;
+  font-family: $font-text, sans-serif;
   margin: auto;
   box-sizing: border-box;
 }
@@ -21,13 +21,13 @@ h2 {
 }
 
 h3 {
-  color: black;
+  color: $primary-text-color;
   font-size: 18px;
   font-weight: 700;
 }
 
 p {
-  color: black;
+  color: $primary-text-color;
   font-size: 17px;
   font-weight: 300;
 }
