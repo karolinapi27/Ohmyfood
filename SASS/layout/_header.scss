@@ -3,10 +3,23 @@
 header {
     text-align: center;
     box-shadow: $box-shadow;
+    padding: 14px 0 13px 0;
+
+    @media (min-width: 1024px) {
+        padding-top: 30px;
+        padding-bottom: 30px;
+
+    }
 
     & img {
-        width: 162px;
-        height: 44px;
+        width: 197px;
+        height: 36px;
         margin: auto;
+        flex-shrink: 0;
+
+        @media (min-width: 1024px) {
+            width: 200px;
+            height: 34.202px;
+        }
     }
 }

@@ -1,6 +1,9 @@
 // heart animations //
 .empty-heart {
     position: absolute;
+    width: 22px;
+    height: 21px;
+    flex-shrink: 0;
     right: 25px;
     top: 85%;
     transform: translateY(-50%);

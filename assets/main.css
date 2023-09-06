@@ -97,7 +97,7 @@ p {
 .home-card img {
   display: block;
   width: 100%;
-  height: 231px;
+  height: 174px;
   border-radius: 15px 15px 0 0;
   object-fit: cover;
 }
@@ -106,8 +106,9 @@ p {
   position: absolute;
   background: #99E2D0;
   color: #008766;
+  font-size: 16px;
   font-weight: 500;
-  padding: 0.7rem 1.5rem;
+  padding: 10px 15px 10px 15px;
   border-radius: 0.3rem;
   top: 1.5rem;
   right: 1.5rem;
@@ -122,6 +123,9 @@ p {
 
 .empty-heart {
   position: absolute;
+  width: 22px;
+  height: 21px;
+  flex-shrink: 0;
   right: 25px;
   top: 85%;
   transform: translateY(-50%);
@@ -190,7 +194,7 @@ input::placeholder {
 
 .filter {
   display: grid;
-  gap: 25px;
+  gap: 30px;
   padding: 50px 0 68px 0;
 }
 @media (min-width: 1024px) {
@@ -234,9 +238,9 @@ input::placeholder {
 .filter h2 {
   padding-left: 20px;
 }
-@media (min-width: 1024px) {
+@media (min-width: 768px) and (max-width: 1024px) {
   .filter h2 {
-    padding-left: 0;
+    padding-left: 115px;
   }
 }
 
@@ -251,10 +255,15 @@ input::placeholder {
   height: 24px;
   border-radius: 50%;
   left: -1rem;
+  font-size: 14.182px;
+  font-weight: 500;
 }
 
 .fa-color {
   color: #7E7E7E;
+  width: 13.019px;
+  height: 19.903px;
+  flex-shrink: 0;
 }
 
 .fa-color2 {
@@ -312,7 +321,7 @@ input::placeholder {
 }
 @media (min-width: 1024px) {
   .header-arrow {
-    bottom: 44px;
+    bottom: 37px;
   }
 }
 
@@ -391,7 +400,7 @@ input::placeholder {
 }
 @media (min-width: 768px) {
   .menu-section ul {
-    width: 80%;
+    width: 70%;
     margin: auto;
   }
 }
@@ -429,11 +438,25 @@ input::placeholder {
 header {
   text-align: center;
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
+  padding: 14px 0 13px 0;
+}
+@media (min-width: 1024px) {
+  header {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
 }
 header img {
-  width: 162px;
-  height: 44px;
+  width: 197px;
+  height: 36px;
   margin: auto;
+  flex-shrink: 0;
+}
+@media (min-width: 1024px) {
+  header img {
+    width: 200px;
+    height: 34.202px;
+  }
 }
 
 footer {
@@ -486,7 +509,7 @@ footer a {
 }
 
 .fa-footer {
-  width: 11.918px;
+  width: 11px;
   height: 13px;
   flex-shrink: 0;
   padding-right: 15px;
