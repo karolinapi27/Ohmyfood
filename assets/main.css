@@ -81,6 +81,10 @@ p {
   transition: background-color 250ms;
   transition-property: all;
 }
+.button:hover {
+  background: linear-gradient(356deg, #a86ee0 0%, #b493de 33%, #ff93e1 100%);
+  box-shadow: 0px 2px 10px 0px #525252;
+}
 
 .home-card {
   position: relative;
@@ -191,7 +195,8 @@ input::placeholder {
 }
 @media (min-width: 1024px) {
   .filter {
-    padding: 50px 180px 50px 180px;
+    width: 80%;
+    margin: auto;
   }
 }
 .filter ol {
@@ -374,7 +379,7 @@ input::placeholder {
   font-size: 15.043px;
 }
 
-.price {
+.menu-section-price {
   font-weight: 700;
 }
 
@@ -481,7 +486,8 @@ footer a {
 }
 
 .fa-footer {
-  width: 11px;
+  width: 11.918px;
   height: 13px;
-  padding-right: 11px;
+  flex-shrink: 0;
+  padding-right: 15px;
 }/*# sourceMappingURL=main.css.map */
