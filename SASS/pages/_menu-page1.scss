@@ -24,7 +24,6 @@
     }
 }
 
-
 // Image de la page restaurant //
 
 .restaurant-image {
@@ -44,7 +43,7 @@
 
     @media (min-width: 768px) {
         margin-top: -25px;
-        ;
+
     }
 
     & h1 {
@@ -107,11 +106,6 @@
     padding-bottom: 40px;
     padding-top: 12px;
 
-    @media (min-width: 768px) {
-        width: 70%;
-        margin: auto;
-    }
-
     & li {
         display: grid;
         padding: 15px;
@@ -151,4 +145,15 @@
         width: 80%;
         margin: auto;
     }
+
+    .responsive-width {
+        width: 70%;
+        margin: auto;
+    }
+}
+
+.responsive-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
