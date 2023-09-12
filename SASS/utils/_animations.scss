@@ -6,6 +6,11 @@
     top: 85%;
     font-size: 25px;
     transform: translateY(-50%);
+    background-clip: text;
+    transition-property: all;
+    transition-duration: 2s;
+    background-clip: text;
+    -webkit-background-clip: text;
 }
 
 .full-heart {
@@ -26,4 +31,14 @@
 .full-heart:hover {
     opacity: 2;
     background-image: $btn-color;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate (180deg);
+    }
+
+    100% {
+        transform: rotate (260deg);
+    }
 }

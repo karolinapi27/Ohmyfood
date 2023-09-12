@@ -78,9 +78,9 @@ p {
   background: var(--Button-Gradient, linear-gradient(193deg, #9356DC -11.44%, #FF79DA 123.93%));
   margin: auto;
   white-space: nowrap;
-  transition: background-color 1s;
-  transition-property: all;
   box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+  transition: background 400ms;
+  transition-property: all;
 }
 .button:hover {
   background: linear-gradient(175deg, #a16be0 0%, #ff93e1 90%);
@@ -129,6 +129,11 @@ p {
   top: 85%;
   font-size: 25px;
   transform: translateY(-50%);
+  background-clip: text;
+  transition-property: all;
+  transition-duration: 2s;
+  background-clip: text;
+  -webkit-background-clip: text;
 }
 
 .full-heart {
@@ -151,6 +156,14 @@ p {
   background-image: var(--Button-Gradient, linear-gradient(193deg, #9356DC -11.44%, #FF79DA 123.93%));
 }
 
+@keyframes rotate {
+  0% {
+    transform: rotate 180deg;
+  }
+  100% {
+    transform: rotate 260deg;
+  }
+}
 .search-form {
   background: #eaeaea;
   display: flex;
@@ -357,8 +370,7 @@ input::placeholder {
 }
 
 .flex {
-  display: flex;
-  justify-content: space-between;
+  flex: 1;
 }
 
 .menu-section {
@@ -391,33 +403,45 @@ input::placeholder {
   font-weight: 700;
 }
 
+.menu-section-price-flex {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
 .menu-section ul {
   display: grid;
   gap: 12px;
   padding-bottom: 40px;
   padding-top: 12px;
+  transition: margin-right 0.5s;
+  animation-duration: 1s;
+}
+.menu-section ul :hover .checkmark {
+  visibility: visible;
+  margin-right: -15px;
 }
 .menu-section ul li {
-  display: grid;
+  display: flex;
   padding: 15px;
   border-radius: 15.043px;
   background: white;
   box-shadow: 0px 4.01149px 15.0431px 0px rgba(0, 0, 0, 0.1);
   position: relative;
 }
-.menu-section ul .checkmark {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+
+.checkmark {
+  display: grid;
+  place-items: center;
   font-size: 24px;
   color: white;
   width: 59px;
-  height: 74px;
+  height: 75px;
   background: #99E2D0;
   border-radius: 0 15.043px 15.043px 0;
-  position: absolute;
-  right: 0px;
-  top: 0px;
+  margin: -1rem -5rem -1rem 1rem;
+  box-shadow: 0px 4.01149px 15.0431px 0px rgba(0, 0, 0, 0.1);
+  visibility: hidden;
 }
 
 .btn-width {
@@ -438,6 +462,14 @@ input::placeholder {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.responsive-title .empty-heart {
+  position: initial;
+  transform: none;
+}
+.responsive-title .full-heart {
+  position: initial;
+  transform: none;
 }
 
 header {

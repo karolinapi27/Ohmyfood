@@ -63,9 +63,9 @@
 // Menu déroulant //
 
 .flex {
-    display: flex;
-    justify-content: space-between;
+    flex: 1;
 }
+
 
 .menu-section {
     background: #f6f6f6;
@@ -100,36 +100,48 @@
     font-weight: 700;
 }
 
+.menu-section-price-flex {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+
+}
+
 .menu-section ul {
     display: grid;
     gap: 12px;
     padding-bottom: 40px;
     padding-top: 12px;
+    transition: margin-right 0.5s;
+    animation-duration: 1s;
+
+    & :hover .checkmark {
+        visibility: visible;
+        margin-right: -15px;
+    }
 
     & li {
-        display: grid;
+        display: flex;
         padding: 15px;
         border-radius: 15.043px;
         background: $white;
         box-shadow: 0px 4.01149px 15.0431px 0px rgba(0, 0, 0, 0.10);
         position: relative;
-
     }
+}
 
-    & .checkmark {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 24px;
-        color: white;
-        width: 59px;
-        height: 74px;
-        background: $tertiary-color;
-        border-radius: 0 15.043px 15.043px 0;
-        position: absolute;
-        right: 0px;
-        top: 0px;
-    }
+.checkmark {
+    display: grid;
+    place-items: center;
+    font-size: 24px;
+    color: white;
+    width: 59px;
+    height: 75px;
+    background: $tertiary-color;
+    border-radius: 0 15.043px 15.043px 0;
+    margin: -1rem -5rem -1rem 1rem;
+    box-shadow: 0px 4.01149px 15.0431px 0px rgba(0, 0, 0, 0.10);
+    visibility: hidden;
 
 }
 
@@ -156,4 +168,14 @@
     display: flex;
     justify-content: center;
     align-items: center;
+
+    & .empty-heart {
+        position: initial;
+        transform: none;
+    }
+
+    & .full-heart {
+        position: initial;
+        transform: none;
+    }
 }

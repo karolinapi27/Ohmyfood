@@ -9,9 +9,10 @@
     background: $btn-color;
     margin: auto;
     white-space: nowrap;
-    transition: background-color 1s;
-    transition-property: all;
     box-shadow: $shadow-button;
+    transition: background 400ms;
+    transition-property: all;
+
 
     &:hover {
         background: linear-gradient(175deg,
