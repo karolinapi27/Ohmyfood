@@ -124,21 +124,26 @@ p {
 
 @keyframes rotate {
   0% {
-    transform: rotate 180deg;
+    transform: rotate(360deg);
   }
   100% {
-    transform: rotate 260deg;
+    transform: rotate(0);
+  }
+}
+@keyframes slide {
+  from {
+    margin-right: -15px;
+  }
+  to {
+    margin-right: -15px;
   }
 }
 .empty-heart {
   position: absolute;
-  flex-shrink: 0;
   right: 25px;
   top: 85%;
   font-size: 25px;
   transform: translateY(-50%);
-  background-clip: text;
-  -webkit-background-clip: text;
 }
 
 .full-heart {
@@ -149,12 +154,38 @@ p {
   font-size: 25px;
   opacity: 0;
   background-clip: text;
+  transition-property: all;
+  background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
-  transition: 2s ease-out;
+  transition-duration: 1.5s;
+}
+.full-heart .full-heart:hover {
+  opacity: 1;
+  background-image: var(--Button-Gradient, linear-gradient(193deg, #9356DC -11.44%, #FF79DA 123.93%));
 }
 
-.full-heart:hover {
+.empty-heart-menu {
+  position: absolute;
+  font-size: 25px;
+  transform: translateY(-50%);
+  top: 47%;
+}
+
+.full-heart-menu {
+  position: absolute;
+  transform: translateY(-50%);
+  font-size: 25px;
+  opacity: 0;
+  top: 47%;
+  background-clip: text;
+  transition-property: all;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  transition-duration: 1.5s;
+}
+.full-heart-menu.full-heart-menu:hover {
   opacity: 1;
   background-image: var(--Button-Gradient, linear-gradient(193deg, #9356DC -11.44%, #FF79DA 123.93%));
 }
@@ -433,12 +464,13 @@ input::placeholder {
   gap: 12px;
   padding-bottom: 40px;
   padding-top: 12px;
-  transition: margin-right 0.5s;
-  animation-duration: 1s;
 }
-.menu-section ul :hover .checkmark {
+.menu-section ul :hover .checkmark-animation {
   visibility: visible;
-  margin-right: -15px;
+  animation: slide 3s ease-in;
+}
+.menu-section ul :hover .checkmark-animation .checkmark {
+  animation: rotate 0.5s ease-in-out;
 }
 .menu-section ul li {
   display: flex;
@@ -450,7 +482,7 @@ input::placeholder {
   overflow: hidden;
 }
 
-.checkmark {
+.checkmark-animation {
   display: grid;
   place-items: center;
   font-size: 24px;
@@ -463,6 +495,7 @@ input::placeholder {
   margin: -1rem -5rem -1rem 1rem;
   box-shadow: 0px 4.01149px 15.0431px 0px rgba(0, 0, 0, 0.1);
   visibility: hidden;
+  transition: margin-right 1s ease-in-out;
 }
 
 .btn-width {
@@ -483,14 +516,6 @@ input::placeholder {
   display: flex;
   justify-content: center;
   align-items: center;
-}
-.responsive-title .empty-heart {
-  position: initial;
-  transform: none;
-}
-.responsive-title .full-heart {
-  position: initial;
-  transform: none;
 }
 
 header {

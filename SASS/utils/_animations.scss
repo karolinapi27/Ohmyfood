@@ -2,23 +2,30 @@
 
 @keyframes rotate {
     0% {
-        transform: rotate (180deg);
+        transform: rotate(360deg);
     }
 
     100% {
-        transform: rotate (260deg);
+        transform: rotate(0);
+    }
+}
+
+@keyframes slide {
+    from {
+        margin-right: -15px;
+    }
+
+    to {
+        margin-right: -15px;
     }
 }
 
 .empty-heart {
     position: absolute;
-    flex-shrink: 0;
     right: 25px;
     top: 85%;
     font-size: 25px;
     transform: translateY(-50%);
-    background-clip: text;
-    -webkit-background-clip: text;
 }
 
 .full-heart {
@@ -29,14 +36,42 @@
     font-size: 25px;
     opacity: 0;
     background-clip: text;
+    transition-property: all;
+    background-clip: text;
     -webkit-background-clip: text;
     color: transparent;
-    transition: 2s ease-out;
+    transition-duration: 1.5s;
+
+    & .full-heart:hover {
+        opacity: 1;
+        background-image: $btn-color;
+    }
 }
 
-.full-heart:hover {
-    opacity: 1;
-    background-image: $btn-color;
+.empty-heart-menu {
+    position: absolute;
+    font-size: 25px;
+    transform: translateY(-50%);
+    top: 47%;
+}
+
+.full-heart-menu {
+    position: absolute;
+    transform: translateY(-50%);
+    font-size: 25px;
+    opacity: 0;
+    top: 47%;
+    background-clip: text;
+    transition-property: all;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    transition-duration: 1.5s;
+
+    &.full-heart-menu:hover {
+        opacity: 1;
+        background-image: $btn-color;
+    }
 }
 
 // 
