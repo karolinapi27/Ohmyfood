@@ -14,3 +14,13 @@
     font-weight: 500;
     line-height: normal;
 }
+
+@mixin full-heart {
+    opacity: 0;
+    background-clip: text;
+    transition-property: all;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    transition-duration: 1.5s;
+}

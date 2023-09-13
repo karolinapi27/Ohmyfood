@@ -29,18 +29,12 @@
 }
 
 .full-heart {
+    @include full-heart;
     position: absolute;
     right: 25px;
     top: 85%;
     transform: translateY(-50%);
     font-size: 25px;
-    opacity: 0;
-    background-clip: text;
-    transition-property: all;
-    background-clip: text;
-    -webkit-background-clip: text;
-    color: transparent;
-    transition-duration: 1.5s;
 
     & .full-heart:hover {
         opacity: 1;
@@ -56,22 +50,14 @@
 }
 
 .full-heart-menu {
+    @include full-heart;
     position: absolute;
     transform: translateY(-50%);
     font-size: 25px;
-    opacity: 0;
     top: 47%;
-    background-clip: text;
-    transition-property: all;
-    background-clip: text;
-    -webkit-background-clip: text;
-    color: transparent;
-    transition-duration: 1.5s;
 
     &.full-heart-menu:hover {
         opacity: 1;
         background-image: $btn-color;
     }
 }
-
-// 
