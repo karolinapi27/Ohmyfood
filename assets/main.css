@@ -122,6 +122,14 @@ p {
   gap: 5px;
 }
 
+@keyframes rotate {
+  0% {
+    transform: rotate 180deg;
+  }
+  100% {
+    transform: rotate 260deg;
+  }
+}
 .empty-heart {
   position: absolute;
   flex-shrink: 0;
@@ -129,9 +137,6 @@ p {
   top: 85%;
   font-size: 25px;
   transform: translateY(-50%);
-  background-clip: text;
-  transition-property: all;
-  transition-duration: 2s;
   background-clip: text;
   -webkit-background-clip: text;
 }
@@ -144,54 +149,16 @@ p {
   font-size: 25px;
   opacity: 0;
   background-clip: text;
-  transition-property: all;
-  transition-duration: 2s;
-  background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
+  transition: 2s ease-out;
 }
 
 .full-heart:hover {
-  opacity: 2;
+  opacity: 1;
   background-image: var(--Button-Gradient, linear-gradient(193deg, #9356DC -11.44%, #FF79DA 123.93%));
 }
 
-@keyframes rotate {
-  0% {
-    transform: rotate 180deg;
-  }
-  100% {
-    transform: rotate 260deg;
-  }
-}
-.progress__bar {
-  transform-origin: left;
-  transform: scaleX(0.5);
-  animation: progress-bar 1000ms 150ms both;
-}
-
-@keyframes progress-bar {
-  0% {
-    transform: scaleX(0);
-    opacity: 0.1;
-  }
-  17% {
-    transform: scaleX(0.18);
-  }
-  24% {
-    transform: scaleX(0.4);
-    animation-timing-function: cubic-bezier(0.9, 0, 0.1, 1);
-  }
-  46% {
-    transform: scaleX(0.81);
-  }
-  85%, 100% {
-    opacity: 1;
-  }
-  100% {
-    transform: scaleX(1);
-  }
-}
 .loader {
   display: grid;
   place-items: center;
@@ -226,9 +193,10 @@ p {
 }
 
 input {
-  border: none;
+  border: #eaeaea;
   background: #eaeaea;
   padding: 0;
+  height: 20px;
 }
 
 input::placeholder {
@@ -419,6 +387,8 @@ input::placeholder {
 
 .flex {
   flex: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .menu-section {
@@ -434,16 +404,16 @@ input::placeholder {
 }
 .menu-section h3 {
   overflow: hidden;
-  text-overflow: ellipsis;
   white-space: nowrap;
+  text-overflow: ellipsis;
   font-size: 18px;
   font-weight: 500;
   margin-bottom: 5px;
 }
 .menu-section p {
   overflow: hidden;
-  text-overflow: ellipsis;
   white-space: nowrap;
+  text-overflow: ellipsis;
   font-size: 15.043px;
 }
 
@@ -477,6 +447,7 @@ input::placeholder {
   background: white;
   box-shadow: 0px 4.01149px 15.0431px 0px rgba(0, 0, 0, 0.1);
   position: relative;
+  overflow: hidden;
 }
 
 .checkmark {
@@ -486,6 +457,7 @@ input::placeholder {
   color: white;
   width: 59px;
   height: 75px;
+  flex-shrink: 0;
   background: #99E2D0;
   border-radius: 0 15.043px 15.043px 0;
   margin: -1rem -5rem -1rem 1rem;

@@ -64,6 +64,8 @@
 
 .flex {
     flex: 1;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 
@@ -81,8 +83,8 @@
 
     & h3 {
         overflow: hidden;
-        text-overflow: ellipsis;
         white-space: nowrap;
+        text-overflow: ellipsis;
         font-size: 18px;
         font-weight: 500;
         margin-bottom: 5px;
@@ -90,8 +92,8 @@
 
     & p {
         overflow: hidden;
-        text-overflow: ellipsis;
         white-space: nowrap;
+        text-overflow: ellipsis;
         font-size: 15.043px;
     }
 }
@@ -104,7 +106,6 @@
     display: flex;
     justify-content: flex-end;
     align-items: flex-end;
-
 }
 
 .menu-section ul {
@@ -128,7 +129,7 @@
         background: $white;
         box-shadow: 0px 4.01149px 15.0431px 0px rgba(0, 0, 0, 0.10);
         position: relative;
-
+        overflow: hidden;
     }
 }
 
@@ -139,6 +140,7 @@
     color: white;
     width: 59px;
     height: 75px;
+    flex-shrink: 0;
     background: $tertiary-color;
     border-radius: 0 15.043px 15.043px 0;
     margin: -1rem -5rem -1rem 1rem;

@@ -36,9 +36,10 @@
 }
 
 input {
-    border: none;
+    border: $lightgrey;
     background: $lightgrey;
     padding: 0;
+    height: 20px;
 }
 
 input::placeholder {
