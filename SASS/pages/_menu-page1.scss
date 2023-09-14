@@ -33,7 +33,6 @@
     }
 }
 
-
 // Menu list //
 
 .flex {
@@ -85,12 +84,8 @@
 
     & :hover .checkmark-animation {
         visibility: visible;
-        animation: slide 3s ease-in;
-
-
-        & .checkmark {
-            animation: rotate 0.5s ease-in-out;
-        }
+        margin-right: -15px;
+        transition: cubic-bezier(0.25, 0.1, 0.25, 1);
     }
 
     & li {
@@ -110,14 +105,13 @@
     font-size: 24px;
     color: white;
     width: 59px;
-    height: 75px;
+    height: 76px;
     flex-shrink: 0;
     background: $tertiary-color;
     border-radius: 0 15.043px 15.043px 0;
     margin: -1rem -5rem -1rem 1rem;
     box-shadow: 0px 4.01149px 15.0431px 0px rgba(0, 0, 0, 0.10);
     visibility: hidden;
-    transition: margin-right 1s ease-in-out;
 }
 
 // Responsive tablet & desktop //

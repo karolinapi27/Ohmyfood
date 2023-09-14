@@ -126,22 +126,6 @@ p {
   gap: 5px;
 }
 
-@keyframes rotate {
-  0% {
-    transform: rotate(360deg);
-  }
-  100% {
-    transform: rotate(0);
-  }
-}
-@keyframes slide {
-  from {
-    margin-right: -15px;
-  }
-  to {
-    margin-right: -15px;
-  }
-}
 .empty-heart {
   position: absolute;
   right: 25px;
@@ -205,17 +189,17 @@ p {
   position: fixed;
   inset: 0;
   z-index: 1;
-  animation: loader 3s;
-  animation-delay: 3s;
+  animation: loader 4s;
+  animation-delay: 4s;
   animation-fill-mode: both;
 }
 .loader .circle {
-  width: 100px;
-  height: 100px;
+  width: 130px;
+  height: 130px;
   border-radius: 50%;
   background: linear-gradient(#9356DC, #FF79DA, #99E2D0);
   position: relative;
-  animation: spin 0.5s linear infinite;
+  animation: spin 0.6s linear infinite;
 }
 .loader .circle:after {
   content: "";
@@ -476,10 +460,8 @@ input::placeholder {
 }
 .menu-section ul :hover .checkmark-animation {
   visibility: visible;
-  animation: slide 3s ease-in;
-}
-.menu-section ul :hover .checkmark-animation .checkmark {
-  animation: rotate 0.5s ease-in-out;
+  margin-right: -15px;
+  transition: cubic-bezier(0.25, 0.1, 0.25, 1);
 }
 .menu-section ul li {
   display: flex;
@@ -497,14 +479,13 @@ input::placeholder {
   font-size: 24px;
   color: white;
   width: 59px;
-  height: 75px;
+  height: 76px;
   flex-shrink: 0;
   background: #99E2D0;
   border-radius: 0 15.043px 15.043px 0;
   margin: -1rem -5rem -1rem 1rem;
   box-shadow: 0px 4.01149px 15.0431px 0px rgba(0, 0, 0, 0.1);
   visibility: hidden;
-  transition: margin-right 1s ease-in-out;
 }
 
 @media (min-width: 768px) {
