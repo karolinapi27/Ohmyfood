@@ -87,6 +87,10 @@ p {
   box-shadow: 0px 4px 20px 5px rgba(0, 0, 0, 0.25);
 }
 
+.btn-width {
+  width: 186px;
+}
+
 .home-card {
   position: relative;
   width: 100%;
@@ -147,6 +151,11 @@ p {
 }
 
 .full-heart {
+  position: absolute;
+  right: 25px;
+  top: 85%;
+  transform: translateY(-50%);
+  font-size: 25px;
   opacity: 0;
   background-clip: text;
   transition-property: all;
@@ -154,13 +163,8 @@ p {
   -webkit-background-clip: text;
   color: transparent;
   transition-duration: 1.5s;
-  position: absolute;
-  right: 25px;
-  top: 85%;
-  transform: translateY(-50%);
-  font-size: 25px;
 }
-.full-heart .full-heart:hover {
+.full-heart:hover {
   opacity: 1;
   background-image: var(--Button-Gradient, linear-gradient(193deg, #9356DC -11.44%, #FF79DA 123.93%));
 }
@@ -173,6 +177,10 @@ p {
 }
 
 .full-heart-menu {
+  position: absolute;
+  transform: translateY(-50%);
+  font-size: 25px;
+  top: 47%;
   opacity: 0;
   background-clip: text;
   transition-property: all;
@@ -180,12 +188,8 @@ p {
   -webkit-background-clip: text;
   color: transparent;
   transition-duration: 1.5s;
-  position: absolute;
-  transform: translateY(-50%);
-  font-size: 25px;
-  top: 47%;
 }
-.full-heart-menu.full-heart-menu:hover {
+.full-heart-menu:hover {
   opacity: 1;
   background-image: var(--Button-Gradient, linear-gradient(193deg, #9356DC -11.44%, #FF79DA 123.93%));
 }
@@ -360,30 +364,6 @@ input::placeholder {
   }
 }
 
-.header-position {
-  position: relative;
-  padding-top: 13px;
-  padding-bottom: 13px;
-}
-@media (min-width: 1024px) {
-  .header-position {
-    padding-top: 30px;
-    padding-bottom: 30px;
-  }
-}
-
-.header-arrow {
-  position: absolute;
-  font-size: 25px;
-  left: 20px;
-  bottom: 25px;
-}
-@media (min-width: 1024px) {
-  .header-arrow {
-    bottom: 37px;
-  }
-}
-
 .restaurant-image {
   display: block;
   width: 100%;
@@ -419,6 +399,7 @@ input::placeholder {
 .flex {
   flex: 1;
   overflow: hidden;
+  white-space: nowrap;
   text-overflow: ellipsis;
 }
 
@@ -498,10 +479,6 @@ input::placeholder {
   transition: margin-right 1s ease-in-out;
 }
 
-.btn-width {
-  width: 186px;
-}
-
 @media (min-width: 768px) {
   .main-responsive {
     width: 80%;
@@ -539,6 +516,30 @@ header img {
   header img {
     width: 200px;
     height: 34.202px;
+  }
+}
+
+.menu-header-position {
+  position: relative;
+  padding-top: 13px;
+  padding-bottom: 13px;
+}
+@media (min-width: 1024px) {
+  .menu-header-position {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+}
+
+.menu-header-arrow {
+  position: absolute;
+  font-size: 25px;
+  left: 20px;
+  bottom: 25px;
+}
+@media (min-width: 1024px) {
+  .menu-header-arrow {
+    bottom: 37px;
   }
 }
 

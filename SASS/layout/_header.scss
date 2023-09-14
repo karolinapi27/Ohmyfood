@@ -1,5 +1,7 @@
 // _header.scss //
 
+// Home page header //
+
 header {
     text-align: center;
     box-shadow: $box-shadow;
@@ -21,5 +23,29 @@ header {
             width: 200px;
             height: 34.202px;
         }
+    }
+}
+
+// Menu header position // 
+
+.menu-header-position {
+    position: relative;
+    padding-top: 13px;
+    padding-bottom: 13px;
+
+    @media (min-width: 1024px) {
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+}
+
+.menu-header-arrow {
+    position: absolute;
+    font-size: 25px;
+    left: 20px;
+    bottom: 25px;
+
+    @media (min-width: 1024px) {
+        bottom: 37px;
     }
 }

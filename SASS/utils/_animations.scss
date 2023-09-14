@@ -1,5 +1,7 @@
 // heart animations //
 
+// Checkmark animations //
+
 @keyframes rotate {
     0% {
         transform: rotate(360deg);
@@ -20,6 +22,8 @@
     }
 }
 
+// Home page heart //
+
 .empty-heart {
     position: absolute;
     right: 25px;
@@ -29,18 +33,26 @@
 }
 
 .full-heart {
-    @include full-heart;
     position: absolute;
     right: 25px;
     top: 85%;
     transform: translateY(-50%);
     font-size: 25px;
+    opacity: 0;
+    background-clip: text;
+    transition-property: all;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    transition-duration: 1.5s;
 
-    & .full-heart:hover {
+    &:hover {
         opacity: 1;
         background-image: $btn-color;
     }
 }
+
+// Menu page heart //
 
 .empty-heart-menu {
     position: absolute;
@@ -50,13 +62,19 @@
 }
 
 .full-heart-menu {
-    @include full-heart;
     position: absolute;
     transform: translateY(-50%);
     font-size: 25px;
     top: 47%;
+    opacity: 0;
+    background-clip: text;
+    transition-property: all;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    transition-duration: 1.5s;
 
-    &.full-heart-menu:hover {
+    &:hover {
         opacity: 1;
         background-image: $btn-color;
     }

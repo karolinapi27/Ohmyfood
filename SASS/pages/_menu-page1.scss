@@ -1,30 +1,4 @@
-// header//
-
-.header-position {
-    position: relative;
-    padding-top: 13px;
-    padding-bottom: 13px;
-
-    @media (min-width: 1024px) {
-
-        padding-top: 30px;
-        padding-bottom: 30px;
-    }
-}
-
-.header-arrow {
-    position: absolute;
-    font-size: 25px;
-    left: 20px;
-    bottom: 25px;
-
-    @media (min-width: 1024px) {
-
-        bottom: 37px;
-    }
-}
-
-// Image de la page restaurant //
+// Menu restaurant image  //
 
 .restaurant-image {
     display: block;
@@ -33,7 +7,7 @@
     object-fit: cover;
 }
 
-// Titre de la page restaurant//
+// Menu restaurant title//
 
 .title-section {
     position: relative;
@@ -59,12 +33,12 @@
     }
 }
 
-// Menu déroulant //
+
+// Menu list //
 
 .flex {
     flex: 1;
-    overflow: hidden;
-    text-overflow: ellipsis;
+    @include overflow
 }
 
 .menu-section {
@@ -80,18 +54,14 @@
     }
 
     & h3 {
-        overflow: hidden;
-        white-space: nowrap;
-        text-overflow: ellipsis;
+        @include overflow;
         font-size: 18px;
         font-weight: 500;
         margin-bottom: 5px;
     }
 
     & p {
-        overflow: hidden;
-        white-space: nowrap;
-        text-overflow: ellipsis;
+        @include overflow;
         font-size: 15.043px;
     }
 }
@@ -150,13 +120,7 @@
     transition: margin-right 1s ease-in-out;
 }
 
-// Button "Commander" // 
-
-.btn-width {
-    width: 186px;
-}
-
-
+// Responsive tablet & desktop //
 @media (min-width: 768px) {
 
     .main-responsive {
@@ -174,5 +138,4 @@
     display: flex;
     justify-content: center;
     align-items: center;
-
 }
