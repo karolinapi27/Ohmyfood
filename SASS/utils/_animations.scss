@@ -79,3 +79,95 @@
         background-image: $btn-color;
     }
 }
+
+// Loader //
+
+.loader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    background-color: $lightgrey;
+    opacity: 0.99;
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    inset: 0;
+    z-index: 1;
+    animation: loader 3s;
+    animation-fill-mode: both;
+    animation-delay: 3s;
+
+    .dot1 {
+        width: 50px;
+        height: 50px;
+        border-radius: 50px;
+        border: 7px solid $primary-color;
+        position: relative;
+        animation-name: spin;
+        animation-duration: 3s;
+
+    }
+
+    .dot1:after {
+        content: "";
+        border-radius: 50px;
+        width: 50px;
+        height: 50px;
+        border: 3px solid $white;
+        position: absolute;
+    }
+
+    .dot2 {
+        width: 50px;
+        height: 50px;
+        border-radius: 50px;
+        border: 7px solid $secondary-color;
+        animation-name: spin;
+        animation-duration: 3s;
+
+
+        &::after {
+            content: "";
+            border-radius: 50px;
+            width: 50px;
+            height: 50px;
+            border: 3px solid $white;
+            position: absolute;
+        }
+    }
+
+    .dot3 {
+        width: 50px;
+        height: 50px;
+        border-radius: 50px;
+        border: 7px solid $tertiary-color;
+        animation-name: spin;
+        animation-duration: 3s;
+
+        &::after {
+            content: "";
+            border-radius: 50px;
+            width: 50px;
+            height: 50px;
+            border: 3px solid $white;
+            position: absolute;
+        }
+    }
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes loader {
+    to {
+        transform: scale(0);
+    }
+}
