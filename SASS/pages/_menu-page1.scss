@@ -37,12 +37,13 @@
 
 .flex {
     flex: 1;
-    @include overflow
+    @include overflow;
 }
 
 .menu-section {
     background: #f6f6f6;
     padding: 0 10px 40px 10px;
+
 
     & h2 {
         font-size: 16px;
@@ -82,10 +83,12 @@
     padding-bottom: 40px;
     padding-top: 12px;
 
+
     & :hover .checkmark-animation {
         visibility: visible;
         margin-right: -15px;
-        transition: cubic-bezier(0.25, 0.1, 0.25, 1);
+        transition-property: margin-right;
+        transition-duration: 250ms;
     }
 
     & li {
@@ -96,6 +99,7 @@
         box-shadow: 0px 4.01149px 15.0431px 0px rgba(0, 0, 0, 0.10);
         position: relative;
         overflow: hidden;
+        animation: fadein 2.5s;
     }
 }
 

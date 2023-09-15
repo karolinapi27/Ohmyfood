@@ -10,9 +10,8 @@
     margin: auto;
     white-space: nowrap;
     box-shadow: $shadow-button;
-    transition: background 400ms;
+    transition: background 300ms ease-out;
     transition-property: all;
-
 
     &:hover {
         background: linear-gradient(175deg,
