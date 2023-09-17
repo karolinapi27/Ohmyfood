@@ -17,7 +17,7 @@
     line-height: normal;
 }
 
-@mixin overflow {
+@mixin ellipsis {
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;

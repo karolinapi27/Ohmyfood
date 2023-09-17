@@ -11,7 +11,7 @@
 
 .title-section {
     position: relative;
-    background: #f6f6f6;
+    background: $lightgrey2;
     border-radius: 25px 25px 0 0;
     margin-top: -55px;
 
@@ -25,7 +25,6 @@
         font-style: normal;
         font-weight: 400;
         line-height: normal;
-        padding: 35px 17px 40px 10px;
 
         @media (min-width: 768px) {
             text-align: center;
@@ -33,17 +32,23 @@
     }
 }
 
+.title-position {
+    display: flex;
+    padding: 35px 17px 40px 10px;
+    gap: 20px;
+    align-items: center;
+}
+
 // Menu list //
 
-.flex {
+.flex1 {
     flex: 1;
-    @include overflow;
+    overflow: hidden;
 }
 
 .menu-section {
     background: #f6f6f6;
     padding: 0 10px 40px 10px;
-
 
     & h2 {
         font-size: 16px;
@@ -54,14 +59,14 @@
     }
 
     & h3 {
-        @include overflow;
+        @include ellipsis;
         font-size: 18px;
         font-weight: 500;
         margin-bottom: 5px;
     }
 
     & p {
-        @include overflow;
+        @include ellipsis;
         font-size: 15.043px;
     }
 }
@@ -83,12 +88,10 @@
     padding-bottom: 40px;
     padding-top: 12px;
 
-
     & :hover .checkmark-animation {
         visibility: visible;
         margin-right: -15px;
-        transition-property: margin-right;
-        transition-duration: 250ms;
+        transition-duration: 250ms ease-out;
     }
 
     & li {
@@ -97,25 +100,10 @@
         border-radius: 15.043px;
         background: $white;
         box-shadow: 0px 4.01149px 15.0431px 0px rgba(0, 0, 0, 0.10);
-        position: relative;
         overflow: hidden;
+        position: relative;
         animation: fadein 2.5s;
     }
-}
-
-.checkmark-animation {
-    display: grid;
-    place-items: center;
-    font-size: 24px;
-    color: white;
-    width: 59px;
-    height: 76px;
-    flex-shrink: 0;
-    background: $tertiary-color;
-    border-radius: 0 15.043px 15.043px 0;
-    margin: -1rem -5rem -1rem 1rem;
-    box-shadow: 0px 4.01149px 15.0431px 0px rgba(0, 0, 0, 0.10);
-    visibility: hidden;
 }
 
 // Responsive tablet & desktop //
@@ -130,10 +118,10 @@
         width: 70%;
         margin: auto;
     }
-}
 
-.responsive-title {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    .responsive-title {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 }
