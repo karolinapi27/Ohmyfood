@@ -1,3 +1,9 @@
+@mixin centered-flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 // Placeholder, filtres, footer //
 
 @mixin typography {

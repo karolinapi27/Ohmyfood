@@ -34,9 +34,9 @@
 
 .title-position {
     display: flex;
-    padding: 35px 17px 40px 10px;
-    gap: 20px;
     align-items: center;
+    padding: 35px 17px 40px 10px;
+    gap: 25px;
 }
 
 // Menu list //
@@ -88,10 +88,12 @@
     padding-bottom: 40px;
     padding-top: 12px;
 
-    & :hover .checkmark-animation {
-        visibility: visible;
-        margin-right: -15px;
-        transition-duration: 250ms ease-out;
+    & :hover,
+    & :active {
+        .checkmark-animation {
+            visibility: visible;
+            margin-right: -15px;
+        }
     }
 
     & li {
@@ -120,8 +122,6 @@
     }
 
     .responsive-title {
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        @include centered-flex;
     }
 }

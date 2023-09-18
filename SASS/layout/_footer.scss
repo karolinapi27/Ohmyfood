@@ -5,9 +5,10 @@ footer {
     @media (min-width: 768px) {
         display: flex;
         flex-direction: row-reverse;
-        padding: 30px 25px;
         align-items: flex-end;
         justify-content: space-evenly;
+        padding: 30px 25px;
+
     }
 }
 

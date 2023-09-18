@@ -1,9 +1,7 @@
 // HOME
 .search-form {
+    @include centered-flex;
     background: $lightgrey;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     height: 50px;
     gap: 17px;
 
@@ -80,7 +78,6 @@ input::placeholder {
         p {
             @include typography;
         }
-
     }
 }
 
@@ -93,9 +90,7 @@ input::placeholder {
 }
 
 .order-number {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    @include centered-flex;
     position: absolute;
     background: $primary-color;
     color: $white;
