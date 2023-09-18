@@ -1,7 +1,16 @@
-@mixin centered-flex {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+@mixin heart {
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-stroke: 1px black;
+    transition: all 250ms ease-in-out;
+
+    &:hover,
+    &:active {
+        opacity: 1;
+        background-image: $btn-color;
+        -webkit-text-stroke: $btn-color;
+    }
 }
 
 // Placeholder, filtres, footer //
@@ -27,4 +36,10 @@
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
+}
+
+@mixin centered-flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

@@ -145,11 +145,6 @@ p {
   transition: 250ms ease-in;
 }
 
-.checkmark-container input[type=checkbox] {
-  position: absolute;
-  opacity: 0;
-}
-
 .empty-heart {
   position: absolute;
   right: 25px;
