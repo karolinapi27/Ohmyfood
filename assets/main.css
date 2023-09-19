@@ -77,10 +77,9 @@ p {
   border-radius: 25px;
   background: var(--Button-Gradient, linear-gradient(193deg, #9356DC -11.44%, #FF79DA 123.93%));
   margin: auto;
-  white-space: nowrap;
+  cursor: pointer;
   box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
-  transition-property: all;
-  transition: 300ms ease-out;
+  transition: all 300ms ease-out;
 }
 .button:hover {
   background: linear-gradient(0deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.15) 100%), linear-gradient(201deg, #9356DC -5.2%, #FF79DA 110.74%);
@@ -129,54 +128,29 @@ p {
   gap: 5px;
 }
 
-.checkmark-animation {
-  display: grid;
-  place-items: center;
-  font-size: 24px;
-  color: white;
-  width: 59px;
-  height: 75px;
-  flex-shrink: 0;
-  background: #99E2D0;
-  border-radius: 0 15.043px 15.043px 0;
-  margin: -1rem -4rem -1rem 1rem;
-  box-shadow: 0px 4.01149px 15.0431px 0px rgba(0, 0, 0, 0.1);
-  visibility: hidden;
-  transition: 250ms ease-in;
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
-
-.empty-heart {
-  position: absolute;
-  right: 25px;
-  top: 85%;
-  font-size: 22px;
-  transform: translateY(-50%);
-  background-clip: text;
-  -webkit-background-clip: text;
-  color: transparent;
-  -webkit-text-stroke: 1px black;
-  transition: all 250ms ease-in-out;
+@keyframes loader {
+  to {
+    transform: scale(0);
+  }
 }
-.empty-heart:hover, .empty-heart:active {
-  opacity: 1;
-  background-image: var(--Button-Gradient, linear-gradient(193deg, #9356DC -11.44%, #FF79DA 123.93%));
-  -webkit-text-stroke: var(--Button-Gradient, linear-gradient(193deg, #9356DC -11.44%, #FF79DA 123.93%));
+@keyframes fadein {
+  from {
+    opacity: 0;
+    transform: translateY(60%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
-
-.empty-heart-menu {
-  font-size: 22px;
-  background-clip: text;
-  -webkit-background-clip: text;
-  color: transparent;
-  -webkit-text-stroke: 1px black;
-  transition: all 250ms ease-in-out;
-}
-.empty-heart-menu:hover, .empty-heart-menu:active {
-  opacity: 1;
-  background-image: var(--Button-Gradient, linear-gradient(193deg, #9356DC -11.44%, #FF79DA 123.93%));
-  -webkit-text-stroke: var(--Button-Gradient, linear-gradient(193deg, #9356DC -11.44%, #FF79DA 123.93%));
-}
-
 .loader {
   display: flex;
   justify-content: center;
@@ -212,29 +186,57 @@ p {
   background: #eaeaea;
 }
 
-@keyframes spin {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
+.empty-heart {
+  position: absolute;
+  right: 25px;
+  top: 85%;
+  font-size: 22px;
+  transform: translateY(-50%);
+  cursor: pointer;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  -webkit-text-stroke: 1px black;
+  transition: all 250ms ease-in-out;
 }
-@keyframes loader {
-  to {
-    transform: scale(0);
-  }
+.empty-heart:hover {
+  opacity: 1;
+  background-image: var(--Button-Gradient, linear-gradient(193deg, #9356DC -11.44%, #FF79DA 123.93%));
+  -webkit-text-stroke: var(--Button-Gradient, linear-gradient(193deg, #9356DC -11.44%, #FF79DA 123.93%));
 }
-@keyframes fadein {
-  from {
-    opacity: 0;
-    transform: translateY(60%);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+
+.empty-heart-menu {
+  font-size: 22px;
+  cursor: pointer;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  -webkit-text-stroke: 1px black;
+  transition: all 250ms ease-in-out;
 }
+.empty-heart-menu:hover {
+  opacity: 1;
+  background-image: var(--Button-Gradient, linear-gradient(193deg, #9356DC -11.44%, #FF79DA 123.93%));
+  -webkit-text-stroke: var(--Button-Gradient, linear-gradient(193deg, #9356DC -11.44%, #FF79DA 123.93%));
+}
+
+.checkmark-animation {
+  display: grid;
+  place-items: center;
+  font-size: 24px;
+  color: white;
+  width: 59px;
+  height: 75px;
+  flex-shrink: 0;
+  background: #99E2D0;
+  border-radius: 0 15.043px 15.043px 0;
+  margin: -1rem -4rem -1rem 1rem;
+  box-shadow: 0px 4.01149px 15.0431px 0px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  visibility: hidden;
+  transition: 250ms ease-in;
+}
+
 .search-form {
   display: flex;
   justify-content: center;
@@ -391,6 +393,11 @@ input::placeholder {
   height: 275px;
   object-fit: cover;
 }
+@media (min-width: 1024px) {
+  .restaurant-image {
+    height: 430px;
+  }
+}
 
 .title-section {
   position: relative;
@@ -400,7 +407,7 @@ input::placeholder {
 }
 @media (min-width: 768px) {
   .title-section {
-    margin-top: -25px;
+    margin-top: -30px;
   }
 }
 .title-section h1 {
@@ -421,6 +428,11 @@ input::placeholder {
   align-items: center;
   padding: 35px 17px 40px 10px;
   gap: 25px;
+}
+@media (min-width: 768px) {
+  .title-position {
+    padding-top: 50px;
+  }
 }
 
 .flex1 {
@@ -465,13 +477,12 @@ input::placeholder {
 }
 
 .menu-section ul {
-  display: flex;
-  flex-direction: column;
+  display: grid;
   gap: 12px;
   padding-bottom: 40px;
   padding-top: 12px;
 }
-.menu-section ul :hover .checkmark-animation, .menu-section ul :active .checkmark-animation {
+.menu-section ul :hover .checkmark-animation {
   visibility: visible;
   margin-right: -15px;
 }
@@ -488,7 +499,7 @@ input::placeholder {
 
 @media (min-width: 768px) {
   .main-responsive {
-    width: 80%;
+    width: 75%;
     margin: auto;
   }
   .responsive-width {

@@ -23,7 +23,7 @@ input::placeholder {
     @include typography;
 }
 
-// Réservez
+// Réservez le menu qui vous convient //
 
 .home-banner {
     text-align: center;
@@ -39,6 +39,8 @@ input::placeholder {
         padding-bottom: 28px;
     }
 }
+
+// Filtres: ordre de recherche//
 
 .filter {
     display: grid;

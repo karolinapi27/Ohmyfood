@@ -1,12 +1,13 @@
 @mixin heart {
+    cursor: pointer;
     background-clip: text;
     -webkit-background-clip: text;
     color: transparent;
     -webkit-text-stroke: 1px black;
     transition: all 250ms ease-in-out;
 
-    &:hover,
-    &:active {
+
+    &:hover {
         opacity: 1;
         background-image: $btn-color;
         -webkit-text-stroke: $btn-color;

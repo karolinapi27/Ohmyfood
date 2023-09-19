@@ -5,6 +5,10 @@
     width: 100%;
     height: 275px;
     object-fit: cover;
+
+    @media (min-width: 1024px) {
+        height: 430px;
+    }
 }
 
 // Menu restaurant title//
@@ -16,7 +20,7 @@
     margin-top: -55px;
 
     @media (min-width: 768px) {
-        margin-top: -25px;
+        margin-top: -30px;
     }
 
     & h1 {
@@ -37,6 +41,10 @@
     align-items: center;
     padding: 35px 17px 40px 10px;
     gap: 25px;
+
+    @media (min-width: 768px) {
+        padding-top: 50px;
+    }
 }
 
 // Menu list //
@@ -82,14 +90,12 @@
 }
 
 .menu-section ul {
-    display: flex;
-    flex-direction: column;
+    display: grid;
     gap: 12px;
     padding-bottom: 40px;
     padding-top: 12px;
 
-    & :hover,
-    & :active {
+    & :hover {
         .checkmark-animation {
             visibility: visible;
             margin-right: -15px;
@@ -112,7 +118,7 @@
 @media (min-width: 768px) {
 
     .main-responsive {
-        width: 80%;
+        width: 75%;
         margin: auto;
     }
 
