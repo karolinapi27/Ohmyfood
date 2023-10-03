@@ -1,27 +1,27 @@
 /* main.scss */
 
 // Réinitialisation
-@import "base/reset";
+@use "base/reset";
 
 // Import des variables, mixins,utils 
-@import "utils/variables";
-@import "utils/mixins";
+@use "utils/variables";
+@use "utils/mixins";
 
 // Import de la typographie
-@import "base/typography";
+@use "base/typography";
 
 // Import des composants
-@import "components/button";
-@import "components/card";
+@use "components/button";
+@use "components/card";
 
 // Import des fonctions
-@import 'utils/keyframes';
-@import "utils/animations";
+@use 'utils/keyframes';
+@use "utils/animations";
 
 // Import des styles de page
-@import "pages/home-page";
-@import "pages/menu-page1";
+@use "pages/home-page";
+@use "pages/menu-page1";
 
 // Import des styles de mise en page
-@import "layout/header";
-@import "layout/footer";
+@use "layout/header";
+@use "layout/footer";
