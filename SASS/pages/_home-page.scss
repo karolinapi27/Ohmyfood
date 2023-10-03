@@ -5,6 +5,10 @@
     height: 50px;
     gap: 17px;
 
+    @media (max-width: 768px) {
+        padding-left: 30px;
+    }
+
     .search-form-icon {
         width: 12px;
         height: 16px;
