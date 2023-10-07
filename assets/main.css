@@ -6,9 +6,6 @@ span,
 h1,
 h2,
 h3,
-h4,
-h5,
-h6,
 p,
 a,
 img,
@@ -144,7 +141,7 @@ p {
 @keyframes fadein {
   from {
     opacity: 0;
-    transform: translateY(60%);
+    transform: translateY(40%);
   }
   to {
     opacity: 1;
@@ -163,7 +160,7 @@ p {
   inset: 0;
   z-index: 1;
   animation: loader 2s;
-  animation-delay: 2s;
+  animation-delay: 1s;
   animation-fill-mode: both;
 }
 .loader .circle {
@@ -186,43 +183,49 @@ p {
 }
 
 .empty-heart {
-  cursor: pointer;
-  font-size: 22px;
-  background-clip: text;
-  -webkit-background-clip: text;
-  color: transparent;
-  -webkit-text-stroke: 1px black;
   position: absolute;
   right: 25px;
   top: 85%;
+  font-size: 25px;
   transform: translateY(-50%);
 }
 
 .full-heart {
-  cursor: pointer;
-  font-size: 22px;
   position: absolute;
   right: 25px;
   top: 85%;
   transform: translateY(-50%);
+  font-size: 25px;
   opacity: 0;
-  background: -webkit-linear-gradient(#9356DC, #FF79DA);
   background-clip: text;
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  transition: all 2s ease-in-out;
+  background-image: var(--Button-Gradient, linear-gradient(193deg, #9356DC -11.44%, #FF79DA 123.93%));
+  color: transparent;
+  transition: opacity 1s ease-in-out;
 }
 .full-heart:hover {
-  opacity: 2;
+  opacity: 1;
 }
 
 .empty-heart-menu {
-  font-size: 22px;
-  cursor: pointer;
-  font-size: 22px;
+  position: absolute;
+  transform: translateY(-50%);
+  font-size: 25px;
+}
+
+.full-heart-menu {
+  position: absolute;
+  transform: translateY(-50%);
+  font-size: 25px;
+  opacity: 0;
   background-clip: text;
   -webkit-background-clip: text;
+  background-image: var(--Button-Gradient, linear-gradient(193deg, #9356DC -11.44%, #FF79DA 123.93%));
   color: transparent;
+  transition: opacity 1s ease-in-out;
+}
+.full-heart-menu:hover {
+  opacity: 1;
 }
 
 .checkmark-animation {
@@ -444,6 +447,11 @@ input::placeholder {
     padding-top: 50px;
   }
 }
+@media (max-width: 350px) {
+  .title-position {
+    gap: 15px;
+  }
+}
 
 .flex1 {
   flex: 1;
@@ -492,18 +500,6 @@ input::placeholder {
   padding-bottom: 40px;
   padding-top: 12px;
 }
-.menu-section ul:nth-child(1) {
-  animation: fadein;
-  animation-delay: 0.5s;
-}
-.menu-section ul:nth-child(2) {
-  animation: fadein;
-  animation-delay: 1.5s;
-}
-.menu-section ul:nth-child(3) {
-  animation: fadein;
-  animation-delay: 2.5s;
-}
 .menu-section ul :hover .checkmark-animation {
   visibility: visible;
   margin-right: -15px;
@@ -516,6 +512,21 @@ input::placeholder {
   box-shadow: 0px 4.01149px 15.0431px 0px rgba(0, 0, 0, 0.1);
   overflow: hidden;
   position: relative;
+}
+
+.anim-delay-500ms {
+  animation: fadein 2s;
+  animation-delay: 500ms;
+}
+
+.anim-delay-1s {
+  animation: fadein 2s;
+  animation-delay: 1s;
+}
+
+.anim-delay-1_5s {
+  animation: fadein 2s;
+  animation-delay: 1.5s;
 }
 
 @media (min-width: 768px) {
