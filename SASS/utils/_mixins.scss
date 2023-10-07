@@ -1,17 +1,9 @@
 @mixin heart {
     cursor: pointer;
+    font-size: 22px;
     background-clip: text;
     -webkit-background-clip: text;
     color: transparent;
-    -webkit-text-stroke: 1px black;
-    transition: all 250ms ease-in-out;
-
-
-    &:hover {
-        opacity: 1;
-        background-image: $btn-color;
-        -webkit-text-stroke: $btn-color;
-    }
 }
 
 // Placeholder, filtres, footer //

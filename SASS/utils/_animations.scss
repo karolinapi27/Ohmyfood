@@ -24,7 +24,6 @@
 
     .circle:after {
         content: "";
-        border-radius: 50px;
         border-radius: 50%;
         position: absolute;
         top: 10px;
@@ -35,15 +34,34 @@
     }
 }
 
-// Home-page heart //
+// Home-page heart
 
 .empty-heart {
+    @include heart;
+    -webkit-text-stroke: 1px black;
     position: absolute;
     right: 25px;
     top: 85%;
-    font-size: 22px;
     transform: translateY(-50%);
-    @include heart;
+}
+
+.full-heart {
+    cursor: pointer;
+    font-size: 22px;
+    position: absolute;
+    right: 25px;
+    top: 85%;
+    transform: translateY(-50%);
+    opacity: 0;
+    background: -webkit-linear-gradient(#9356DC, #FF79DA);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: all 2s ease-in-out;
+
+    &:hover {
+        opacity: 2;
+    }
 }
 
 // Menu-page heart //
